@@ -1,0 +1,38 @@
+[
+    {
+        "Nombre": "BAD BOYS FOR LIFE",
+        "Sala": "Sala2",
+        "Dia": "2020-05-09",
+        "Hora": "13:00:00"                
+    },
+    {
+        "Nombre": "EL HOMBRE INVISIBLE",
+        "Sala": "Sala2",
+        "Dia": "2020-05-09",
+        "Hora": "16:00:00"                
+    },
+    {
+        "Nombre": "EXTRACTION",
+        "Sala": "Sala1",
+        "Dia": "2020-05-10",
+        "Hora": "17:00:00"                
+    },
+    {
+        "Nombre": "STAR WARS",
+        "Sala": "Sala3",
+        "Dia": "2020-05-25",
+        "Hora": "18:30:00"                
+    },
+    {
+        "Nombre": "EL HOYO",
+        "Sala": "Sala1",
+        "Dia": "2020-05-09",
+        "Hora": "20:00:00"                
+    },
+    {
+        "Nombre": "Sonic, la película",
+        "Sala": "Sala3",
+        "Dia": "2020-05-25",
+        "Hora": "10:00:00"                
+    }
+]
