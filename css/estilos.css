@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 600px;
+    background: #7F00FF;  /* fdegradado de internet */
+    background: -webkit-linear-gradient(to right, hsla(293, 100%, 50%, 0.445), rgba(128, 0, 255, 0.603));  /* Chrome 10-25, Safari 5.1-6 */
+    /*imagen de fondo y transparencia del degradado*/
+    background: linear-gradient(to right, hsla(293, 100%, 50%, 0.445), rgba(128, 0, 255, 0.603)), url(../img/cinePortadaN.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /**/
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/*nav inicio, acerca de lo del lado derecho */
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a{
+    color:#fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/*hover al pasar el mause se subraya*/
+nav > a:hover{
+    text-decoration: underline;
+}
+
+header .textos_inicio{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* coloca el texto en el siguiente renglon*/
+    flex-direction: column;
+    text-align: center;
+}
+
+/*color y tamaño de el rexto de inicio*/
+.textos_inicio h1{
+    font-size: 50px;
+    color:#fff;
+}
+
+/*color y tamaño de el rexto de inicio*/
+.textos_inicio h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+
+.fondoOla{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* About us */
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor_sobre_nosotros{
+    display: flex;
+    /* space-evenly es para repartir el espacio equitativamente*/
+    justify-content: space-evenly;
+}
+
+.Nuestra_imagen{
+    width: 48%;
+}
+
+.sobre_nosotros .contenido_textos{
+    width: 48%;
+}
+
+.contenido_textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido_textos h3 span{
+    /*numeros circulo*/
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    /*circulo*/
+    width: 30px;
+    height: 30px;
+    /*centra los numeros*/
+    padding: 2px;
+    /*sombra*/
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .9);
+    /*espacio*/
+    margin-right: 5px;
+}
+
+.contenido_textos p{
+    /*espacio entre los textos de nuestros productos*/
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* cartelera*/
+
+.cartelera{
+    /*oscurece el cambio de seccion */
+    background: #f2f2f2;
+}
+
+.Galeria_cartelera{
+    display: flex;
+    justify-content: space-evenly;
+    /*si pasa del porcentanje se corta*/
+    flex-wrap: wrap;
+}
+
+.imagen_cartelera{
+    /*tamaño de las imagenes*/
+    width: 24%;
+    /* sombra*/
+    margin-bottom: 10px;
+    /* cuafeado de las imagenes height: 200px;*/
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen_cartelera > img{
+    /*solo directamente a img (imagenes de las pelcilas cartelera)
+    tamaño */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.Seleccionar_pelicula{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* para la imagen lotante cuando nos paramos con el cursor*/
+    transform: scale(0);
+    /*color del sombreado*/ 
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .9s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Seleccionar_pelicula img{
+    width: 50px;
+}
+
+.Seleccionar_pelicula p{
+    color: #fff;
+}
+
+.imagen_cartelera:hover .Seleccionar_pelicula{
+    transform: scale(1);
+}
+
+/* Clients */
+
+.comentarios{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.comentarios .comentario{
+    /*fondo de la coemtario*/
+    background: #4d0686;
+    display: flex;
+    /*organizar el fondo del comentario*/
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.comentarios .comentario img{
+    /*cuadrado con la imagen*/
+    width: 100px;
+    height: 100px;
+    /**/
+    object-fit: cover;
+    border: 3px solid #fff;
+    /*imagen redonda*/
+    border-radius: 50%;
+    display: block;
+}
+
+.comentarios .comentario > .contenido_comentario{
+    width: 60%;
+    color: #fff;
+}
+
+.comentarios .comentario  > .contenido_comentario p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/*  final sevicios*/
+
+.Nuestros_servicios{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+
+.contenedor_de_nuestro_servicio{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Individual{
+    width: 28%;
+    text-align: center;
+}
+
+.Individual img{
+    width: 90%;
+}
+
+.Individual h3{
+    margin: 10px 0;
+}
+
+.Individual p{
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* pie de pagina */
+
+.contenedor_pie_de_pagina{
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor_pie_de_pagina{
+    /* coloca los elementros en columnas*/
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    /* deja un espacio entre los elementos*/
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.pie_de_pagina{
+    text-align: center;
+}
+
+.pie_de_pagina h4{
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.pie_de_pagina p{
+    color: #ccc;
+}
+
+.titulo_final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+/* para que se adapate a los celulares */
+
+/*cuando llegue a 900px se debe adaptar a 500px */
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor_sobre_nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre_nosotros .contenido_textos{
+        width: 90%;
+    }
+
+    .Nuestra_imagen{
+        width: 90%;
+    }
+
+    /* Galeria */
+
+    .imagen_cartelera{
+        width: 44%;
+    }
+
+    /* Clientes */
+
+    .comentarios{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .comentarios .comentario{
+        width: 90%;
+    }
+
+    /*first-child primer elemento*/
+    .comentarios .comentario:first-child{
+        margin-bottom: 30px;
+    }
+
+    /* servicios */
+
+    .contenedor_de_nuestro_servicio{
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Individual{
+        width: 100%;
+        text-align: center;
+    }
+
+    /*  nth-child(1) el primer y segundo elemento (2)*/
+    .Individual:nth-child(1), .Individual:nth-child(2){
+        margin-bottom: 60px;
+    }
+
+    .Individual img{
+        width: 90%;
+    }
+}
+
+/* adapta de 500px a 200px para celular*/
+
+@media screen and (max-width:500px){
+
+    /*nav = menu de navegacion*/
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .textos_inicio h1{
+        font-size: 35px;
+    }
+
+    .textos_inicio h2{
+        font-size: 20px;
+    }
+
+    /* Nosotros*/
+
+    .Nuestra_imagen{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre_nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* Galeria */
+
+    .imagen_cartelera{
+        width: 95%;
+    }
+
+    /* Clientes */
+
+    .comentarios .comentario{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .comentarios .comentario img{
+        width: 90px;
+        height: 90px;
+    }
+
+    /* pie de pagina */
+
+    .contenedor_pie_de_pagina{
+        flex-direction: column;
+        border: none;
+    }
+
+    .pie_de_pagina{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .pie_de_pagina h4{
+        border: none;
+    }
+
+    .pie_de_pagina p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo_final{
+        font-size: 20px;
+    }
+
+
+
+    /*descripcion */
+    .imagen_descripcion{
+        width: 50px;
+        height: 50px;
+ 
+        width: 50%;
+    }
+
+    .video{
+        text-align: center;
+        font-size: 24px;
+        margin: 20px 0 0 0;
+        color: #9e9797;
+    }
+
+    
+
+}
