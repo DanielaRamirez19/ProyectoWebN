@@ -1,6 +1,23 @@
+
+var xhr = new XMLHttpRequest();
+xhr.withCredentials = false;
+
+xhr.addEventListener("readystatechange", function() {
+  if(this.readyState === 4) {
+    console.log(this.responseText);
+      let element = document.getElementById(`elemen`);    
+      element.innerHTML = `<p>${this.responseText}</p>`;
+    }
+});
+
+xhr.open("GET", "https://localhost:44349/api/Cine");
+
+xhr.send();
+
+
 //console.log("correcto");
 
-$(document).on('ready', function () {
+/*$(document).on('ready', function () {
     $.getJSON("catalogo.json", function (json) {
         $('#select').empty();
         $('#select').append($('<option>').text("Select"));
@@ -45,4 +62,4 @@ function traerDatos() {
             }
         }
     }
-}
+}*/
