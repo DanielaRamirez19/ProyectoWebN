@@ -1,23 +1,4 @@
-
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = false;
-
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-    console.log(this.responseText);
-      let element = document.getElementById(`elemen`);    
-      element.innerHTML = `<p>${this.responseText}</p>`;
-    }
-});
-
-xhr.open("GET", "https://localhost:44349/api/Cine");
-
-xhr.send();
-
-
-//console.log("correcto");
-
-/*$(document).on('ready', function () {
+$(document).on('ready', function () {
     $.getJSON("catalogo.json", function (json) {
         $('#select').empty();
         $('#select').append($('<option>').text("Select"));
@@ -27,39 +8,29 @@ xhr.send();
     });
 });
 
-
-document.querySelector("#boton").addEventListener("click", traerDatos());
-
-function traerDatos() {
-
-    const xhttp = new XMLHttpRequest();
-
-    xhttp.open("GET", "catalogo.json", true);
-
-    xhttp.send();
-
-    xhttp.overrideMimeType('text/xml');
-
-    xhttp.onreadystatechange = function () {
-
-        if (this.readyState == 4 && this.status == 200) {
-            //console.log(this.responseText);
-            let datos = JSON.parse(this.responseText);
-            //console.log(datos);
-            let res= document.querySelector('#res');
+window.onload = function traerDatos() {
+    var xhr = new XMLHttpRequest();
+    xhr.withCredentials = false;
+    
+    xhr.addEventListener("readystatechange", function() {
+      if(this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText);
+        let datos = JSON.parse(this.responseText);
+        let res= document.querySelector('#res');
             res.innerHTML = '';
 
             for(let item of datos){
-                //console.log(item.Sala);
                 res.innerHTML += `
                     <tr>
                         <td>${item.Nombre}</td>
-                        <td>${item.Sala}</td>
-                        <td>${item.Dia}</td>
-                        <td>${item.Hora}</td>
+                        <td>${item.Duracion}</td>
+                        <td>${item.Director}</td>
                     </tr>
                 `
             }
-        }
-    }
-}*/
+      }
+    });
+    
+    xhr.open("GET", "https://localhost:44359/api/Cine");
+    xhr.send();
+}
