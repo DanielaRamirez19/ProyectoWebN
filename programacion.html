@@ -16,9 +16,10 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Nombre</th>
-                        <th>Duracion</th>
-                        <th>Director</th>
+                        <th>Pelicula</th>
+                        <th>Sala</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
                     </tr>
                 </thead>
 
@@ -31,12 +32,20 @@
 
     <div class="container">
         <div class="section">
-            <select class="browser-default" id="usuarios">
-                <option value="" disabled selected>Selecciona una pelicula</option>
+            <select class="browser-default" name="grupos" id="usuarios" onclick="seleccionFecha()">
+            <option value="" disabled selected>Selecciona una pelicula</option>
+            </select>
+           
+            <br><select class="browser-default" id="usuariosss" onclick="seleccionHora()">
+                <option value="" disabled selected>Selecciona una fecha</option>
+            </select>
+            <br><select class="browser-default" id="usuarioss">
+                <option value="" disabled selected>Selecciona una hora</option>
             </select>
         </div>
         <button class="btn purple darken-4" id="boton" onclick="location.href='sillas.html'" >Reservar pelicula</button>
     </div>
     <script src="peliculas.js" type="text/javascript"></script>    
+  
 </body>
 </html>
